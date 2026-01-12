@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using task_scheduler.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddOpenApi();
+builder.Services.AddDbContext<ApplicationDbContext>(
+    options => options.UseSqlite(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

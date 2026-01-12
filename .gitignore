@@ -1,0 +1,19 @@
+# Build artifacts
+bin/
+obj/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vs/
+.vscode/
+*.swp
+*.swo
+
+# Environment/Runtime
+node_modules/
+.env
+.env.local
